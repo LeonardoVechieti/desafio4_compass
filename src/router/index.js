@@ -24,8 +24,8 @@ const routes = [
     component: PageThirdTab
   },
   {
-    path: '/sucess',
-    name: 'sucessTab',
+    path: '/success',
+    name: 'successTab',
     component: PageSuccessTab
   }
 ]
