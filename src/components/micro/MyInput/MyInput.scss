@@ -1,0 +1,14 @@
+.inputs{
+    padding: 0.8em;
+  border: 1px solid #ccc;
+  border-color: #8d7a7a;
+  border-radius: 5px;
+  outline: none;
+    &::placeholder{
+        color: #8d7a7a;
+    }
+}
+
+.register{
+    width: 100%;
+}
