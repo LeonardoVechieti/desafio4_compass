@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="container-input">
+    <label class="label">{{ labelName }}</label>
     <input
-      :type="Type"
+      :type="type"
       :class="classInputs"
       :id="idInputs"
       :placeholder="placeholder"
@@ -9,16 +10,13 @@
     />
   </div>
 </template>
+
 <script>
-
 export default {
-  name: "MyInput",
-  data() {
-    
-  },
-
+  // eslint-disable-next-line
+  name: "Input",
   props: {
-    Type: {
+    type: {
       type: String,
       default: "text",
     },
@@ -38,10 +36,16 @@ export default {
       type: String,
       default: "",
     },
+    labelName: {
+      type: String,
+      default: "",
+    },
   },
-  
 };
 </script>
-<style lang="sass" scoped>
-@import './MyInput.scss'
+
+<style lang="scss" scooped>
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import "./Input.scss";
 </style>

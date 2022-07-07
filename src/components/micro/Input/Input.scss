@@ -1,0 +1,23 @@
+.container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Nunito';
+    .label{
+        padding-bottom: 5px;
+    }
+    .inputs{
+        padding: 0.8em;
+        border: 1px solid #ccc;
+        border-color: #8d7a7a;
+        border-radius: 5px;
+        outline: none;
+        &::placeholder{
+            color: #8d7a7a;
+        }
+    }
+}
+
+.register{
+    width: 100%;
+}
