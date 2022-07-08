@@ -6,7 +6,7 @@
 
 <script>
 export default {
-/* eslint-disable */
+  // eslint-disable-next-line
   name: "Title",
   props: {
     type: {
