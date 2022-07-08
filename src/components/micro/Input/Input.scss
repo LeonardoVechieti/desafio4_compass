@@ -1,23 +1,12 @@
-.container-input{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.inputs{
     font-family: 'Nunito';
-    .label{
-        padding-bottom: 5px;
-    }
-    .inputs{
-        padding: 0.8em;
-        border: 1px solid #ccc;
-        border-color: #8d7a7a;
-        border-radius: 5px;
-        outline: none;
-        &::placeholder{
-            color: #8d7a7a;
-        }
-    }
-}
-
-.register{
-    width: 100%;
+    color: #8d7a7a;
+    padding: 0.8em;
+    border: 2px solid;
+    border-color: #8d7a7a;
+    border-radius: 5px;
+    outline: none;
+    &::placeholder{
+        color: #8d7a7a;
+    }   
 }
