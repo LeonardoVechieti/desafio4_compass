@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PageFirstTab from '../views/PageFirstTab/PageFirstTab.vue'
+import Form from '../views/Form/Form.vue'
 import PageSecondTab from '../views/PageSecondTab/PageSecondTab.vue'
 import PageThirdTab from '../views/PageThirdTab/PageThirdTab.vue'
 import PageSuccessTab from '../views/PageSuccessTab/PageSuccessTab.vue'
@@ -10,8 +10,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'first',
-    component: PageFirstTab
+    name: 'form',
+    component: Form
   },
   {
     path: '/second',
