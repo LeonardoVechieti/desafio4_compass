@@ -8,12 +8,16 @@
       class="input"
       labelName="Usuário"
     />
+    <Menu item="basic"/>
+    <Menu item="social"/>
+    <Menu item="certificates"/>
   </div>
 </template>
 
 <script>
 import Input from "../../components/micro/Input/Input.vue";
 import Label from "../../components/micro/Label/Label.vue";
+import Menu from "../../components/containers/Menu/Menu.vue";
 
 export default {
   name: "PageSuccessTab",
@@ -23,6 +27,7 @@ export default {
   components: {
     Input,
     Label,
+    Menu,
   },
 };
 </script>
