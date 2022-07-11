@@ -1,9 +1,6 @@
 <template>
   <div class="title">
-    <h1 :class="nameClass" v-if="type === 'h1'">{{ titleMsg }}</h1>
-    <h2 :class="nameClass" v-if="type === 'h2'">{{ titleMsg }}</h2>
-    <h3 :class="nameClass" v-if="type === 'h3'">{{ titleMsg }}</h3>
-    <h4 :class="nameClass" v-if="type === 'h4'">{{ titleMsg }}</h4>
+    <h1 class="nameClass">{{ tabName }} Tab</h1>
   </div>
 </template>
 
@@ -20,10 +17,14 @@ export default {
       type: String,
       default: "nameClass",
     },
-    titleMsg: {
+    tabName: {
       type: String,
-      default: "null",
     },
+  },
+  data(){
+    return{
+      type: "Forms",
+    };
   },
 };
 </script>
