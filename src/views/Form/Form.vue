@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Header />
+    <Header tab="first" v-show="nav_basic"/>
+    <Header tab="second" v-show="nav_social"/>
+    <Header tab="third" v-show="nav_certificates"/>
+    <Header tab="success" v-show="success"/>
+
     <div class="main">
       <div class="card">
         <Title type="h3" titleMsg="Team Sign Up" nameClass="title-card" />
