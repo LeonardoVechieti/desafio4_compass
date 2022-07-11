@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    background-color: #e5e5e5;
+    justify-content: center;
+    padding-left: 11%;
+    border-bottom: 1px solid #aaaaaa;
+
+    .headerText{
+        display: block;
+    }
+
+    .headerTitle{
+        display: block;
+    }
+}
