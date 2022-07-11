@@ -1,26 +1,26 @@
 <template>
   <div class="menu-flex">
-    <div class="nav-basic" v-show="nav_basic">
+    <div class="nav-basic" v-show="nav_basic" @click="nav1()">
       <Texts type="text" textClass="nav" msg="Basic" />
     </div>
 
-    <div class="nav-basic-at" v-show="nav_basic_at">
+    <div class="nav-basic-at" v-show="nav_basic_at" @click="nav1()">
       <Texts type="text" textClass="nav" msg="Basic" />
     </div>
 
-    <div class="menu-social" v-show="nav_social">
+    <div class="menu-social" v-show="nav_social" @click="nav2()">
       <Texts type="text" textClass="nav" msg="Social" />
     </div>
 
-    <div class="menu-social-at" v-show="nav_social_at">
+    <div class="menu-social-at" v-show="nav_social_at" @click="nav2()">
       <Texts type="text" textClass="nav" msg="Social" />
     </div>
 
-    <div class="menu-certificates" v-show="nav_certificates">
+    <div class="menu-certificates" v-show="nav_certificates" @click="nav3()">
       <Texts type="text" textClass="nav" msg="Certificates" />
     </div>
 
-    <div class="menu-certificates-at" v-show="nav_certificates_at">
+    <div class="menu-certificates-at" v-show="nav_certificates_at" @click="nav4()">
       <Texts type="text" textClass="nav" msg="Certificates" />
     </div>
   </div>
@@ -66,7 +66,38 @@ export default {
         break;
     }
   },
-  methods: {},
+  methods: {
+    nav1() {
+      this.nav_basic = false;
+      this.nav_basic_at = true;
+      this.nav_social = true;
+      this.nav_social_at = false;
+      this.nav_certificates = true;
+      this.nav_certificates_at = false;
+      this.$emit("nav", "basic");
+    },
+    nav2() {
+      this.nav_basic = true;
+      this.nav_basic_at = false;
+      this.nav_social = false;
+      this.nav_social_at = true;
+      this.nav_certificates = true;
+      this.nav_certificates_at = false;
+        this.$emit("nav", "social");
+    },
+    nav3() {
+      this.nav_basic = true;
+      this.nav_basic_at = false;
+      this.nav_social = true;
+      this.nav_social_at = false;
+      this.nav_certificates = false;
+      this.nav_certificates_at = true;
+        this.$emit("nav", "certificates");
+    },
+
+    
+  
+  },
 };
 </script>
 
@@ -80,13 +111,15 @@ export default {
   width: 400px;
   height: 100%;
   font-family: "Nunito";
+  border-bottom: 1px solid;
+  border-bottom-color: rgb(52, 52, 55);
 }
 .nav-basic {
   width: 33%;
 }
 .nav-basic-at {
   width: 33%;
-  border-bottom: 4px solid;
+  border-bottom: 3px solid;
   border-bottom-color: blue;
 }
 .menu-social {
@@ -96,7 +129,7 @@ export default {
 }
 .menu-social-at {
   width: 33%;
-    border-bottom: 4px solid;
+    border-bottom: 3px solid;
   border-bottom-color: blue;
 }
 
@@ -106,7 +139,7 @@ export default {
 }
 .menu-certificates-at {
   width: 33%;
-    border-bottom: 4px solid;
+    border-bottom: 3px solid;
   border-bottom-color: blue;
 }
 </style>
