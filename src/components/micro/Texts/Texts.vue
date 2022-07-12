@@ -1,6 +1,6 @@
 <template>
   <div :class="textContainer">
-    <p type="text" class="textClass">{{ msg }}</p>
+    <p type="text" :class="textClass">{{ msg }}</p>
   </div>
 </template>
 
@@ -13,14 +13,16 @@ export default {
       type: String,
       require: true,
     },
-    textClass: {
-      type: String,
-    },
     msg: {
       type: String,
       default: "null",
     },
+    textClass: {
+      type: String,
+      default: "textClass",
+    },
     textContainer: String,
+
   },
 };
 </script>

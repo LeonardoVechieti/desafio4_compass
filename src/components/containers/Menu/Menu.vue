@@ -101,45 +101,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.menu-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  width: 400px;
-  height: 100%;
-  font-family: "Nunito";
-  border-bottom: 1px solid;
-  border-bottom-color: rgb(52, 52, 55);
-}
-.nav-basic {
-  width: 33%;
-}
-.nav-basic-at {
-  width: 33%;
-  border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
-.menu-social {
-  width: 33%;
-  
-  
-}
-.menu-social-at {
-  width: 33%;
-    border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
-
-.menu-certificates {
-  width: 33%;
-  
-}
-.menu-certificates-at {
-  width: 33%;
-    border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
+<style lang="scss" scooped>
+@import "./Menu.scss";
 </style>
