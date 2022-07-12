@@ -1,0 +1,48 @@
+.Button:hover {
+    cursor: pointer;
+}
+
+.Button {
+    margin-left: 10px;
+    Width: 90px;
+    Height: 40px;
+    background: #074EE8;
+    color: white;
+    border: none;
+    background-position-y: 50%;
+    border-radius: 4px;
+}
+
+.ButtonNext {
+    background-image: url("@/assets/Vector.png");
+    background-repeat: no-repeat;
+    background-size: 8px;
+    background-position-x: calc(70%);
+    padding: 0px 24px 0px 0px;
+}
+
+.ButtonFinish {
+    background-image: url("@/assets/VectorFinish.png");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position-x: calc(20%);
+    padding: 0px 0px 0px 16px;
+}
+
+
+.ButtonReturn {
+    background-image: url("@/assets/VectorFinish.png");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position-x: calc(20%);
+    padding: 0px 0px 0px 16px;
+}
+
+.ButtonMore {
+    background-image: url("@/assets/VectorMore.png");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position-x: calc(20%);
+    padding: 0px 0px 0px 16px;
+}
+
