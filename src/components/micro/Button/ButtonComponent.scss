@@ -1,48 +1,59 @@
-.Button:hover {
-    cursor: pointer;
-}
+.containerButton {
+    position: relative;
 
-.Button {
+  .Button:hover {
+    cursor: pointer;
+  }
+
+  .Button {
     margin-left: 10px;
-    Width: 90px;
-    Height: 40px;
-    background: #074EE8;
+    width: 90px;
+    height: 40px;
+    background: #074ee8;
     color: white;
     border: none;
     background-position-y: 50%;
     border-radius: 4px;
-}
+  }
 
-.ButtonNext {
+  .ButtonNext {
     background-image: url("@/assets/Vector.png");
     background-repeat: no-repeat;
     background-size: 8px;
     background-position-x: calc(70%);
     padding: 0px 24px 0px 0px;
-}
+  }
 
-.ButtonFinish {
+  .ButtonFinish {
     background-image: url("@/assets/VectorFinish.png");
     background-repeat: no-repeat;
     background-size: 14px;
     background-position-x: calc(20%);
     padding: 0px 0px 0px 16px;
-}
+  }
 
-
-.ButtonReturn {
+  .ButtonReturn {
     background-image: url("@/assets/VectorFinish.png");
     background-repeat: no-repeat;
     background-size: 14px;
     background-position-x: calc(20%);
     padding: 0px 0px 0px 16px;
-}
+  }
 
-.ButtonMore {
+  .ButtonMore {
     background-image: url("@/assets/VectorMore.png");
     background-repeat: no-repeat;
     background-size: 16px;
-    background-position-x: calc(20%);
-    padding: 0px 0px 0px 16px;
-}
+    background-position-x: calc(10%);
+    padding: 0px 0px 0px 0px;
+  }
 
+  .vector{
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 10px;
+    height: 14px;
+  }
+
+}
