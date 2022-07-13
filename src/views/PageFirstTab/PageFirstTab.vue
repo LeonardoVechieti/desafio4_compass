@@ -1,18 +1,5 @@
 
 <template>
-<<<<<<< HEAD
-  <Header />
-</template>
-
-<script>
-import Header from '@/components/containers/Header/Header.vue';
-export default {
-  /* eslint-disable */
-  components:{
-    Header,
-  },
-};
-=======
 <div>
   <p>FirstTab</p>
   <!-- <ButtonComponent classButton = "Button ButtonNext" text="Next"/>
@@ -34,7 +21,6 @@ export default {
     // ButtonComponent,
   }
 }
->>>>>>> feature/button
 </script>
 
 <style>

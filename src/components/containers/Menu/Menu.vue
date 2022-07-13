@@ -5,7 +5,7 @@
     </div>
 
     <div class="nav-basic-at" v-show="nav_basic_at" @click="nav1()">
-      <Texts type="text" textClass="nav" msg="Basic" />
+      <Texts type="text" textClass="nav-at" msg="Basic" />
     </div>
 
     <div class="menu-social" v-show="nav_social" @click="nav2()">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="menu-social-at" v-show="nav_social_at" @click="nav2()">
-      <Texts type="text" textClass="nav" msg="Social" />
+      <Texts type="text" textClass="nav-at" msg="Social" />
     </div>
 
     <div class="menu-certificates" v-show="nav_certificates" @click="nav3()">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="menu-certificates-at" v-show="nav_certificates_at" @click="nav4()">
-      <Texts type="text" textClass="nav" msg="Certificates" />
+      <Texts type="text" textClass="nav-at" msg="Certificates" />
     </div>
   </div>
 </template>
@@ -101,45 +101,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.menu-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  width: 400px;
-  height: 100%;
-  font-family: "Nunito";
-  border-bottom: 1px solid;
-  border-bottom-color: rgb(52, 52, 55);
-}
-.nav-basic {
-  width: 33%;
-}
-.nav-basic-at {
-  width: 33%;
-  border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
-.menu-social {
-  width: 33%;
-  
-  
-}
-.menu-social-at {
-  width: 33%;
-    border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
-
-.menu-certificates {
-  width: 33%;
-  
-}
-.menu-certificates-at {
-  width: 33%;
-    border-bottom: 3px solid;
-  border-bottom-color: blue;
-}
+<style lang="scss" scooped>
+@import "./Menu.scss";
 </style>

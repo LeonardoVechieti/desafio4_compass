@@ -7,7 +7,7 @@
 
     <div class="main">
       <div class="card">
-        <Title type="h3" titleMsg="Team Sign Up" nameClass="title-card" />
+        <Title type="h3" titleMsg="Team Sign Up" nameClass="title-card" class="title-card" />
         <Menu @nav="getNav" />
         <Basic v-show="nav_basic" />
         <Social v-show="nav_social" />
