@@ -1,38 +1,27 @@
 <template>
-  <div>
-    <div class="card-basic">
-      <div class="form">
-        <Label labelName="Full Name *" />
-        <Input
-          type="text"
-          idInputs="fullName"
-          placeholder="Foo Bar"
-          class="input"
-        />
-      </div>
-      <div class="form">
-        <Label labelName="Nickname" />
-        <Input
-          type="text"
-          idInputs="nickName"
-          placeholder="Juanito"
-          class="input"
-        />
-      </div>
+  <form class="form">
+    <Label labelName="Full Name*"/>
+    <div>
+      <Input class="input inputFullname" type="text" placeholder="Foo Bar"/>
     </div>
 
-    <Label labelName="Email *" />
-    <Input type="email" idInputs="email" placeholder="foo@bar.com" />
+    <Label labelName="Nickname"/>
+    <div>
+      <Input class="input inputNickname" type="text" placeholder="Juanito"/>
+    </div>
 
-    <Label labelName="Phone" />
-    <Input type="tel" idInputs="phone" placeholder="(83 00000-0000)" />
+    <Label labelName="Email *"/>
+     <div>
+      <Input class="input inputEmail" type="email" placeholder="foo@bar.com"/>
+    </div>
 
-    <Label labelName="Birthday" />
-    <Input type="number" idInputs="day" placeholder="Day" />
-    <Input type="number" idInputs="month" placeholder="Month" />
-    <Input type="number" idInputs="year" placeholder="Year" />
-    <Input type="number" idInputs="Age" placeholder="Age" />
-  </div>
+    <Label labelName="Phone"/>
+    <div>
+      <Input class="input inputPhone" type="number" placeholder="(83) 00000-0000"/>
+    </div>
+
+
+  </form>
 </template>
 
 <script>
@@ -49,19 +38,6 @@ export default {
 };
 </script>
 
-<style>
-.card-basic {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    
-}
-.form {
-  width: 50%;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
-}
+<style lang="scss" scooped>
+  @import "./Basic.scss";
 </style>
