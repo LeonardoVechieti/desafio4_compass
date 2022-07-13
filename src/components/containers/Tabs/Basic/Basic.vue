@@ -64,4 +64,5 @@ export default {
   flex-direction: column;
   margin-bottom: 1em;
 }
+
 </style>
