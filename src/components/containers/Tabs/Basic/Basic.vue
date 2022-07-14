@@ -54,7 +54,7 @@
         <Label class="labelCheckbox" labelName="I accept the terms and privacy"/>
       </div>
     <div class="containerButton">
-      <ButtonComponent text="More" classButton="Button ButtonMore"/>
+      <ButtonComponent text="Next" classButton="Button ButtonNext"/>
     </div>
     </form>
   </div>

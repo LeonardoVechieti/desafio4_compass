@@ -1,6 +1,5 @@
 <template>
 <div class="containerButton">
-    <img class="vector" src="@/assets/Vector.png">
     <button :class="classButton">{{ text }}</button>
 </div>
 </template>
