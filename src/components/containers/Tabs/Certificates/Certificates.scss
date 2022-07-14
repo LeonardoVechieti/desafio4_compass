@@ -4,6 +4,11 @@
     margin-top: 30px;
     
 }
+.instContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .input {
     padding: 6px;
@@ -66,3 +71,5 @@
 @media (max-widht: 600px){
 
 }
+
+
