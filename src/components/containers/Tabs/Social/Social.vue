@@ -1,36 +1,42 @@
 <template>
-  <div class="card-social">
-    <div class="forms">
+  <div>
+    <form class="form">
       <Label labelName="LinkedIn" />
-      <Input
-        type="text"
-        idInputs="linkedln"
-        placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-        class="input"
-      />
-    </div>
-    <div class="forms">
+      <div>
+        <Input
+          class="input"
+          type="text"
+          placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+        />
+      </div>
+
       <Label labelName="Github *" />
-      <Input
-        type="text"
-        idInputs="github"
-        placeholder="https://github.com/foobar"
-        class="input"
-      />
-    </div>
+      <div>
+        <Input
+          class="input"
+          type="text"
+          placeholder="https://github.com/foobar"
+        />
+      </div>
+
+      <div class="containerButton">
+        <ButtonComponent text="Next" classButton="Button ButtonNext" />
+      </div>
+    </form>
   </div>
 </template>
 
 <script>
 import Label from "@/components/micro/Label/Label.vue";
 import Input from "@/components/micro/Input/Input.vue";
-
+import ButtonComponent from "@/components/micro/Button/ButtonComponent.vue";
 export default {
   // eslint-disable-next-line
   name: "Social",
   components: {
     Label,
     Input,
+    ButtonComponent,
   },
 };
 </script>
