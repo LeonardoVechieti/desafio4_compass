@@ -7,8 +7,8 @@
       </div>
 
       <div class="buttonCertificate">
-        <Button class="button buttonSelect" type="button" text="Certificates" />
-        <ButtonMore bttnMsg="More" />
+        <ButtonCertificates />
+        <ButtonMore />
       </div>
 
       <Label labelName="Team Name *" />
@@ -38,6 +38,7 @@ import Input from '@/components/micro/Input/Input.vue';
 import Label from '@/components/micro/Label/Label.vue';
 import Button from '@/components/micro/Button/ButtonComponent.vue';
 import ButtonMore from '@/components/micro/ButtonMore/ButtonMore.vue'
+import ButtonCertificates from '@/components/micro/ButtonCertificates/ButtonCertificates.vue'
 export default {
 /* eslint-disable */ 
   name: "Certificates",
@@ -45,7 +46,8 @@ export default {
     Input,
     Label,
     Button,
-    ButtonMore
+    ButtonMore,
+    ButtonCertificates
 },
 };
 </script>
