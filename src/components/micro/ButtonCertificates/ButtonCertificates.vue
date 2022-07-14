@@ -1,9 +1,8 @@
 <template>
     <div>
         <button class="buttonCertificates">
-            <img src="@/assets/VectorMore.png" class="moreImg" />
-            <p>More</p>
-            <img src="@/assets/Vector.png" class="vectorImg" />
+            <p>Certificates</p>
+            <img src="@/assets/VectorCertificate.png" class="vectorCer" />
         </button>
     </div>
 </template>
@@ -23,7 +22,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import './ButtonMore.scss';
+<style lang="scss" scooped>
+@import "./ButtonCertificates.scss";
 </style>
