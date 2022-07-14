@@ -27,7 +27,7 @@
       </div>
 
       <div class="buttonFinishContainer">
-        <Button class="Button ButtonFinish" type="button" text="Finish"/>
+        <Button classButton="Button ButtonFinish" type="button" text="Finish"/>
       </div>
     </form>
   </div>
