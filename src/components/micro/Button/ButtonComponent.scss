@@ -48,12 +48,12 @@
     padding: 0px 0px 0px 0px;
   }
 
-  .vector{
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    width: 10px;
-    height: 14px;
+  .ButtonCertificates {
+    background-image: url("@/assets/VectorCertificate.png");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position-x: calc(20%);
+    padding: 0px 0px 0px 0px;
   }
 
 }
