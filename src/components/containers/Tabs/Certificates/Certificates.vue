@@ -1,7 +1,7 @@
 <template>
   <div class="cardCertificates">
     <form id="formCertificates">
-      <Label labelName="Certificates" />
+        <Label labelName="Certificates" />
       <div>
         <Input class="input" id="inputCertificates" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
       </div>
@@ -11,19 +11,28 @@
         <ButtonMore />
       </div>
 
-      <Label labelName="Team Name *" />
+      <div class="teamContainer">
+        <Label labelName="Team Name *" />
+        <Span spanMsg="Please enter your team name"/>
+      </div>
       <div>
-        <Input class="input inputTeam" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+        <Input class="input inputTeam" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required />
       </div>
 
-      <Label labelName="Institution *" />
+      <div class="instContainer">
+        <Label labelName="Institution *" />  
+        <Span spanMsg="Please enter your Institution" />
+      </div>
       <div>
-        <Input class="input inputInstitution" type="text" placeholder="Universidade de Passo Fundo" />
+        <Input class="input inputInstitution" type="text" placeholder="Universidade de Passo Fundo" required />
       </div>
 
-      <Label labelName="Graduation *" />
+      <div class="gradContainer">
+        <Label labelName="Graduation *" />
+        <Span spanMsg="Please enter your Graduation" />
+      </div>
       <div>
-        <Input class="input inputGraduation" type="text" placeholder="Ciências da Computação" />
+        <Input class="input inputGraduation" type="text" placeholder="Ciências da Computação" required />
       </div>
 
       <div class="buttonFinishContainer">
@@ -39,6 +48,7 @@ import Label from '@/components/micro/Label/Label.vue';
 import Button from '@/components/micro/Button/ButtonComponent.vue';
 import ButtonMore from '@/components/micro/ButtonMore/ButtonMore.vue'
 import ButtonCertificates from '@/components/micro/ButtonCertificates/ButtonCertificates.vue'
+import Span from '@/components/micro/Span/Span.vue'
 export default {
 /* eslint-disable */ 
   name: "Certificates",
@@ -47,7 +57,8 @@ export default {
     Label,
     Button,
     ButtonMore,
-    ButtonCertificates
+    ButtonCertificates,
+    Span
 },
 };
 </script>
