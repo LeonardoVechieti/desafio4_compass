@@ -25,6 +25,12 @@
         margin-bottom: 0.5em;
     }
 
+    @media(max-height: 800px){
+        .card{
+            padding: 0 0;
+        }
+    }
+
     @media (max-width: 600px) {
         .card {
             width: 100%;
