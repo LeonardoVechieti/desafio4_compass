@@ -1,13 +1,13 @@
 <template>
   <div class="cardBasic">
     <form class="form">
-      <Label labelName="Full Name *"/>
       <div>
+        <Label labelName="Full Name *"/>
         <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
       </div>
-
-      <Label labelName="Nickname"/>
+      
       <div>
+        <Label labelName="Nickname"/>
         <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
       </div>
 
