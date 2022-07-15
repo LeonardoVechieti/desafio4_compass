@@ -1,46 +1,49 @@
 <template>
   <div class="cardBasic">
     <form class="form">
-      <Label labelName="Full Name *"/>
       <div>
+        <Label labelName="Full Name *"/>
+        <Span spanMsg="Please enter your Name" />
         <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
       </div>
 
-      <Label labelName="Nickname"/>
       <div>
+        <Label labelName="Nickname"/>
         <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
       </div>
 
       <div class="emailPhone">
         <div class="containerEmail">
           <Label labelName="Email *"/>
-          <Input class="input inputEmail" type="email" placeholder="foo@bar.com" idInput="email"/>
+          <Span spanMsg="Please enter your Email" />
+          <Input class="input" type="email" placeholder="foo@bar.com" idInput="email"/>
         </div>
 
         <div class="containerPhone">
           <Label labelName="Phone"/>
-          <Input class="input inputPhone" type="number" placeholder="(83) 00000-0000" idInput="phone"/>
+          <Input class="input" type="number" placeholder="(83) 00000-0000" idInput="phone"/>
         </div>
       </div>
   
       <div class="containerLabel">
         <Label class="labelSize" labelName="Birthday *"/>
+        <Span spanMsg="Please enter your Age" />
       </div>
       
       <div class="inputsAge">
         <div class="containerInputs">
           <Label labelName="Day"/>
-          <Input class="input inputDay" type="number" idInput="day"/>
+          <Input class="input" type="number" idInput="day"/>
         </div>
 
         <div class="containerInputs">
           <Label labelName="Month"/>
-          <Input class="input inputDay" type="number" idInput="month"/>
+          <Input class="input" type="number" idInput="month"/>
         </div>
 
         <div class="containerInputs">
           <Label labelName="Year"/>
-          <Input class="input inputDay" type="number" idInput="year"/>
+          <Input class="input" type="number" idInput="year"/>
         </div>
 
         <div class="containerInputs">
@@ -52,6 +55,7 @@
       <div class="containerCheckbox">
         <Input class="inputCheckbox" type="checkbox" idInput="checkbox"/>
         <Label class="labelCheckbox" labelName="I accept the terms and privacy"/>
+        <Span spanMsg="Please confirm the terms" />
       </div>
     <div class="containerButton">
       <ButtonComponent text="Next" classButton="Button ButtonNext"/>
@@ -76,5 +80,5 @@ export default {
 </script>
 
 <style lang="scss" scooped>
-  @import "./Basic.scss";
+@import "./Basic.scss";
 </style>

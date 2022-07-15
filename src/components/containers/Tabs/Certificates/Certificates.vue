@@ -1,8 +1,8 @@
 <template>
   <div class="cardCertificates">
     <form id="formCertificates">
-      <Label labelName="Certificates" />
       <div>
+        <Label labelName="Certificates" />
         <Input
           class="input"
           id="inputCertificates"

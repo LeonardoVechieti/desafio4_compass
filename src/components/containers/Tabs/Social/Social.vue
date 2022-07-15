@@ -1,8 +1,8 @@
 <template>
   <div>
-    <form class="form">
-      <Label labelName="LinkedIn" />
+    <form class="formSocial">
       <div>
+        <Label labelName="LinkedIn" />
         <Input
           class="input"
           type="text"
@@ -10,9 +10,9 @@
           idInput="linkedin"
         />
       </div>
-
-      <Label labelName="Github *" />
       <div>
+        <Label labelName="Github *" />
+         <Span spanMsg="Please enter your GitHub Link" />
         <Input
           class="input"
           type="text"
@@ -20,8 +20,7 @@
           idInput="github"
         />
       </div>
-
-      <div class="containerButton">
+      <div class="containerSocialButton">
         <ButtonComponent text="Next" classButton="Button ButtonNext" />
       </div>
     </form>
