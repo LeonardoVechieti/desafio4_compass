@@ -1,5 +1,5 @@
 .form{
-    height: 500px;
+    height: 550px;
     width: 500px;
     margin-top: 30px;
 
@@ -23,8 +23,8 @@
         gap: 20px;
 
         .containerEmail{
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
             width: 65%;
         }
 
@@ -38,6 +38,7 @@
     
     .containerLabel{
         margin-bottom: 10px;
+        display: flex;
 
         .labelSize{
             font-size: 1.2em;
@@ -86,6 +87,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        margin-top: 5%;
     }
 
     @media (max-width: 600px) {

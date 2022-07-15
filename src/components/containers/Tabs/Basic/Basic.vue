@@ -3,9 +3,10 @@
     <form class="form">
       <div>
         <Label labelName="Full Name *"/>
+        <Span spanMsg="Please enter your Name" />
         <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
       </div>
-      
+
       <div>
         <Label labelName="Nickname"/>
         <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
@@ -14,6 +15,7 @@
       <div class="emailPhone">
         <div class="containerEmail">
           <Label labelName="Email *"/>
+          <Span spanMsg="Please enter your Email" />
           <Input class="input" type="email" placeholder="foo@bar.com" idInput="email"/>
         </div>
 
@@ -25,6 +27,7 @@
   
       <div class="containerLabel">
         <Label class="labelSize" labelName="Birthday *"/>
+        <Span spanMsg="Please enter your Age" />
       </div>
       
       <div class="inputsAge">
@@ -52,6 +55,7 @@
       <div class="containerCheckbox">
         <Input class="inputCheckbox" type="checkbox" idInput="checkbox"/>
         <Label class="labelCheckbox" labelName="I accept the terms and privacy"/>
+        <Span spanMsg="Please confirm the terms" />
       </div>
     <div class="containerButton">
       <ButtonComponent text="Next" classButton="Button ButtonNext"/>

@@ -12,6 +12,7 @@
       </div>
       <div>
         <Label labelName="Github *" />
+         <Span spanMsg="Please enter your GitHub Link" />
         <Input
           class="input"
           type="text"
