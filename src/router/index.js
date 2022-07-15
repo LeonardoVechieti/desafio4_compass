@@ -1,22 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Form from '../views/Form/Form.vue'
+import PageSecondTab from '../views/PageSecondTab/PageSecondTab.vue'
+import PageThirdTab from '../views/PageThirdTab/PageThirdTab.vue'
+import PageSuccessTab from '../views/PageSuccessTab/PageSuccessTab.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'form',
+    component: Form
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/second',
+    name: 'secondTab',
+    component: PageSecondTab
+  },
+  {
+    path: '/third',
+    name: 'thirdTab',
+    component: PageThirdTab
+  },
+  {
+    path: '/success',
+    name: 'successTab',
+    component: PageSuccessTab
   }
 ]
 

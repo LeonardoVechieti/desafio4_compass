@@ -1,0 +1,11 @@
+.inputs{
+    font-family: 'Nunito';
+    color: black;
+    padding: 6px;
+    border: 2px solid #AAAAAA;
+    border-radius: 5px;
+    outline: none;
+    &::placeholder{
+        color: #AAAAAA;
+    }   
+}
