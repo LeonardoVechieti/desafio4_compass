@@ -4,6 +4,11 @@
     margin-top: 30px;
     
 }
+.instContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .input {
     padding: 6px;
@@ -31,6 +36,10 @@
 }
 
 @media (max-height: 800px){
+.cardCertificates{
+    height: 67vh;
+}
+
 #formCertificates{
     height: 450px;
     width: 500px;
@@ -66,3 +75,5 @@
 @media (max-widht: 600px){
 
 }
+
+
