@@ -3,7 +3,7 @@
     <form id="formCertificates">
       <Label labelName="Certificates" />
       <div>
-        <Input class="input" id="inputCertificates" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+        <Input class="input" id="inputCertificates" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" idInput="certificates" />
       </div>
 
       <div class="buttonCertificate">
@@ -13,17 +13,17 @@
 
       <Label labelName="Team Name *" />
       <div>
-        <Input class="input inputTeam" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+        <Input class="input inputTeam" type="text" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" idInput="teamname" />
       </div>
 
       <Label labelName="Institution *" />
       <div>
-        <Input class="input inputInstitution" type="text" placeholder="Universidade de Passo Fundo" />
+        <Input class="input inputInstitution" type="text" placeholder="Universidade de Passo Fundo" idInput="institution"/>
       </div>
 
       <Label labelName="Graduation *" />
       <div>
-        <Input class="input inputGraduation" type="text" placeholder="Ciências da Computação" />
+        <Input class="input inputGraduation" type="text" placeholder="Ciências da Computação" idInput="graduation" />
       </div>
 
       <div class="buttonFinishContainer">

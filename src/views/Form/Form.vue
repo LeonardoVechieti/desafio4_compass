@@ -3,7 +3,7 @@
     <Header tab="first" v-show="nav_basic"/>
     <Header tab="second" v-show="nav_social"/>
     <Header tab="third" v-show="nav_certificates"/>
-    <Header tab="success" v-show="success"/>
+    <Header tab="success" v-show="nav_success"/>
 
     <div class="main">
       <div class="card">
@@ -54,19 +54,29 @@ export default {
           this.nav_basic = true;
           this.nav_social = false;
           this.nav_certificates = false;
+          this.nav_success = false;
           break;
         case "social":
           this.nav_basic = false;
           this.nav_social = true;
           this.nav_certificates = false;
+          this.nav_success = false;
           break;
         case "certificates":
           this.nav_basic = false;
           this.nav_social = false;
           this.nav_certificates = true;
+          this.nav_success = false;
           break;
       }
     },
+    success(){
+      this.nav_basic = false;
+      this.nav_social = false;
+      this.nav_certificates = false;
+      this.nav_success = true;
+      return
+    }
   },
 };
 </script>

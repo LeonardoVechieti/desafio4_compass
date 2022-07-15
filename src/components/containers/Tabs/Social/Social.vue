@@ -7,6 +7,7 @@
           class="input"
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+          idInput="linkedin"
         />
       </div>
 
@@ -16,6 +17,7 @@
           class="input"
           type="text"
           placeholder="https://github.com/foobar"
+          idInput="github"
         />
       </div>
 
