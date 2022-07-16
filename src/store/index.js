@@ -56,7 +56,53 @@ export default new Vuex.Store({
     }, 
     getEmailValid(state) {
       return state.emailValid;
-    }
+    },
+    getFullname(state) {
+      return state.fullname;
+    },
+    getNickname(state) {
+      return state.nickname;
+    },
+    getEmail(state) {
+      return state.email;
+    },
+    getPhone(state) {
+      return state.phone;
+    },
+    getDay(state) {
+      return state.day;
+    },
+    getMonth(state) {
+      return state.month;
+    },
+    getYear(state) {
+      return state.year;
+    },
+    getAge(state) {
+      return state.age;
+    },
+    getCheckbox(state) {
+      return state.checkbox;
+    },
+    getLinkedin(state) {
+      return state.linkedin;
+    },
+    getGithub(state) {
+      return state.github;
+    },
+    getCertificates(state) {
+      return state.certificates;
+    },
+    getTeamname(state) {
+      return state.teamname;
+    },
+    getInstitution(state) {
+      return state.Institution;
+    },
+    getGraduation(state) {
+      return state.Graduation;
+    },
+   
 
 
   },
