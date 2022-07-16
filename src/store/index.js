@@ -32,7 +32,31 @@ export default new Vuex.Store({
  
   },
   getters: {  
-    fullname: state => state.fullname,
+    getCheckboxValid(state) {
+      return state.checkboxValid;
+    },
+    getFullnameValid(state) {
+      return state.fullnameValid;
+    },
+    getAgeValid(state) {
+      return state.ageValid;
+    },
+    getGithubValid(state) {
+      return state.githubValid;
+    },
+    getTeamnameValid(state) {
+      return state.teamnameValid;
+    },
+    getInstitutionValid(state) {
+      return state.institutionValid;
+    },
+    getGraduationValid(state) {
+      return state.graduationValid;
+    }, 
+    getEmailValid(state) {
+      return state.emailValid;
+    }
+
 
   },
   mutations: {
@@ -75,8 +99,8 @@ export default new Vuex.Store({
       console.log(state.year);
     },
     setAge(state, age) {
-      if (state.age >= 5 && state.age <= 122) {
-        state.age = age
+      state.age = age
+      if (state.age >= 5 && state.age <= 122) { 
         state.ageValid = true;
       } else {
         state.ageValid = false;
@@ -85,7 +109,12 @@ export default new Vuex.Store({
     },
     setCheckbox(state, checkbox) {
       state.checkbox = checkbox
-      console.log("StatusValido: " + state.checkbox);
+      if(state.checkbox == true) {
+        state.checkboxValid = true;
+      } else {
+        state.checkboxValid = false;
+      }
+      console.log("StatusValidoVuex: " + state.checkbox);
 
     },
     setLinkedin(state, linkedin) {
