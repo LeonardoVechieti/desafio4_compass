@@ -17,11 +17,9 @@
         <ButtonMore />
       </div>
 
-      <div class="teamContainer">
+      <div>
         <Label labelName="Team Name *" />
         <Span spanMsg="Please enter your team name" />
-      </div>
-      <div>
         <Input
           class="input inputTeam"
           type="text"
@@ -30,11 +28,9 @@
         />
       </div>
 
-      <div class="instContainer">
+      <div>
         <Label labelName="Institution *" />
         <Span spanMsg="Please enter your Institution" />
-      </div>
-      <div>
         <Input
           class="input inputInstitution"
           type="text"
@@ -42,12 +38,10 @@
           idInput="institution"
         />
       </div>
-
-      <div class="gradContainer">
-        <Label labelName="Graduation *" />
-        <Span spanMsg="Please enter your Graduation" />
-      </div>
+      
       <div>
+         <Label labelName="Graduation *" />
+        <Span spanMsg="Please enter your Graduation" />
         <Input
           class="input inputGraduation"
           type="text"

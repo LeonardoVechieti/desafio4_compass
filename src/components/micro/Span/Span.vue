@@ -1,5 +1,7 @@
 <template>
-    <span class="span" :id="spanId">{{spanMsg}}</span>
+<div class="containerSpan">
+  <span class="span" :id="spanId">{{spanMsg}}</span>
+</div>
 </template>
 
 <script>
