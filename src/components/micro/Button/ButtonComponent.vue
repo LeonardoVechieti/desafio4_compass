@@ -1,6 +1,6 @@
 <template>
 <div class="containerButton">
-    <button :class="classButton">{{ text }}</button>
+    <button :class="classButton" @click.prevent="event">{{ text }}</button>
 </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
         classButton: {
             type: String
         },
+    },
+    methods: {
+        event() {
+            this.$emit("click");
+        }
     }
 }
 </script>

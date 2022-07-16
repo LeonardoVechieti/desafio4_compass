@@ -57,7 +57,7 @@
         <Label class="labelCheckbox" labelName="I accept the terms and privacy"/>
         <Span spanMsg="Please confirm the terms" />
       </div>
-    <div class="containerButton">
+    <div class="containerButton" @click="next">
       <ButtonComponent text="Next" classButton="Button ButtonNext"/>
     </div>
     </form>
@@ -76,6 +76,11 @@ export default {
     Input,
     ButtonComponent,
   },
+  methods: {
+    next() {
+      this.$emit("next","social");
+    }
+  }
 };
 </script>
 

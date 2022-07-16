@@ -1,17 +1,24 @@
 <template>
   <div>
-    <Header tab="first" v-show="nav_basic"/>
-    <Header tab="second" v-show="nav_social"/>
-    <Header tab="third" v-show="nav_certificates"/>
-    <Header tab="success" v-show="nav_success"/>
+    <Header tab="first" v-show="nav_basic" />
+    <Header tab="second" v-show="nav_social" />
+    <Header tab="third" v-show="nav_certificates" />
+    <Header tab="success" v-show="nav_success" />
 
     <div class="main">
       <div class="card">
-        <Title type="h3" titleMsg="Team Sign Up" nameClass="title-card" class="title-card" />
-        <Menu @nav="getNav" />
-        <Basic v-show="nav_basic" />
-        <Social v-show="nav_social" />
-        <Certificates v-show="nav_certificates" />
+        <Title
+          type="h3"
+          titleMsg="Team Sign Up"
+          nameClass="title-card"
+          class="title-card"
+        />
+        <Menu @nav="getNav" item="basic" v-show="nav_basic"/>
+        <Menu @nav="getNav" item="social" v-show="nav_social" />
+        <Menu @nav="getNav" item="certificates" v-show="nav_certificates" />
+        <Basic v-show="nav_basic" @next="btnNext" />
+        <Social v-show="nav_social" @next="btnNext" />
+        <Certificates v-show="nav_certificates" @finish="success" />
         <Success v-show="nav_success" />
       </div>
     </div>
@@ -70,13 +77,34 @@ export default {
           break;
       }
     },
-    success(){
-      this.nav_basic = false;
-      this.nav_social = false;
-      this.nav_certificates = false;
-      this.nav_success = true;
-      return
-    }
+    success(item) {
+      console.log("sucess in form: " + item);
+      switch (item) {
+        case "certificates":
+          this.nav_basic = false;
+          this.nav_social = false;
+          this.nav_certificates = false;
+          this.nav_success = true;
+          break;
+      }
+    },
+    btnNext(item) {
+      console.log("btnNext in form: " + item);
+      switch (item) {
+        case "social":
+          this.nav_basic = false;
+          this.nav_social = true;
+          this.nav_certificates = false;
+          this.nav_success = false;
+          break;
+        case "certificates":
+          this.nav_basic = false;
+          this.nav_social = false;
+          this.nav_certificates = true;
+          this.nav_success = false;
+          break;
+      }
+    },
   },
 };
 </script>
