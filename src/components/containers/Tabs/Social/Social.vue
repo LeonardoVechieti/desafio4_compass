@@ -20,7 +20,7 @@
           idInput="github"
         />
       </div>
-      <div class="containerSocialButton">
+      <div class="containerSocialButton" @click="next" >
         <ButtonComponent text="Next" classButton="Button ButtonNext" />
       </div>
     </form>
@@ -38,6 +38,12 @@ export default {
     Label,
     Input,
     ButtonComponent,
+  },
+  methods: {
+    next() {
+      console.log("next in Social");
+      this.$emit("next", "certificates");
+    },
   },
 };
 </script>

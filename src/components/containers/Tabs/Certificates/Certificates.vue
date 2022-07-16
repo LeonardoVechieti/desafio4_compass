@@ -56,8 +56,8 @@
         />
       </div>
 
-      <div class="buttonFinishContainer">
-        <Button classButton="Button ButtonFinish" type="button" text="Finish" />
+      <div class="buttonFinishContainer" @click="finish" >
+        <Button classButton="Button ButtonFinish" type="button" text="Finish"  />
       </div>
     </form>
   </div>
@@ -80,6 +80,12 @@ export default {
     ButtonMore,
     ButtonCertificates,
     Span,
+  },
+  methods: {
+    finish() {
+      console.log("finish in Certificates");
+      this.$emit("finish", "certificates");
+    },
   },
 };
 </script>
