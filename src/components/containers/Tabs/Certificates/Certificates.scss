@@ -2,12 +2,27 @@
     height: 550px;
     width: 500px;
     margin-top: 30px;
-    
 }
+
+.teamContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .instContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.gradContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .input {
