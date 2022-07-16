@@ -68,6 +68,7 @@
 import Label from "@/components/micro/Label/Label.vue";
 import Input from "@/components/micro/Input/Input.vue";
 import ButtonComponent from "@/components/micro/Button/ButtonComponent.vue";
+import Span from "@/components/micro/Span/Span.vue";
 export default {
 // eslint-disable-next-line
   name: "Basic",
@@ -75,6 +76,7 @@ export default {
     Label,
     Input,
     ButtonComponent,
+    Span,
   },
   methods: {
     next() {
