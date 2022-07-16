@@ -29,6 +29,7 @@ export default new Vuex.Store({
     graduationValid: false,
     checkboxValid: false,
     localStorage: false,
+    showSpan: false,
  
   },
   getters: {  

@@ -1,5 +1,5 @@
 <template>
-    <span class="span">{{ spanMsg }}</span>
+    <span class="span" :id="spanId">{{spanMsg}}</span>
 </template>
 
 <script>
@@ -13,10 +13,17 @@ export default {
      },
     spanId: {
       type: String,
-       default: "spanId",
+      default: "spanId",
+    },
+    spanMsg: {
+      type: String,
+      default: "null",
     },
   },
 };
+
+
+
 </script>
 
 <style lang="scss" scooped>
