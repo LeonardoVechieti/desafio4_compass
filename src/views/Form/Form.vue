@@ -19,7 +19,7 @@
         <Basic v-show="nav_basic" @next="btnNext" />
         <Social v-show="nav_social" @next="btnNext" />
         <Certificates v-show="nav_certificates" @finish="success" />
-        <Success v-show="nav_success" />
+        <Success v-if="nav_success===true" />
       </div>
     </div>
   </div>
