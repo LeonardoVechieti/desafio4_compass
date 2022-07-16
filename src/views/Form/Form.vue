@@ -62,7 +62,7 @@ export default {
     };
   },
   methods: {
-    ...mapGetters(["getFullnameValid", "getEmailValid", "getCheckboxValid", "getAgeValid", "getGithubValid"]),
+    ...mapGetters(["getFullnameValid", "getEmailValid", "getCheckboxValid", "getAgeValid", "getGithubValid", "getTeamnameValid", "getInstitutionValid", "getGraduationValid"]),
     getNav(item) {
       switch (item) {
         case "basic":
@@ -89,10 +89,14 @@ export default {
       console.log("sucess in form: " + item);
       switch (item) {
         case "certificates":
-          this.nav_basic = false;
-          this.nav_social = false;
-          this.nav_certificates = false;
-          this.nav_success = true;
+          if(this.getTeamnameValid() === true && this.getInstitutionValid() === true && this.getGraduationValid() === true &&
+          this.getFullnameValid()===true && this.getEmailValid()===true && this.getCheckboxValid()===true && this.getAgeValid()===true &&
+          this.getGithubValid()===true) {
+            this.nav_basic = false;
+            this.nav_social = false;
+            this.nav_certificates = false;
+            this.nav_success = true;
+          }
           break;
       }
     },

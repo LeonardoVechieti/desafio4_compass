@@ -19,7 +19,7 @@
 
       <div>
         <Label labelName="Team Name *" />
-        <Span spanMsg="Please enter your team name" />
+        <Span spanMsg="Please enter your team name" v-show="errorTeamName"/>
         <Input
           class="input inputTeam"
           type="text"
@@ -30,7 +30,7 @@
 
       <div>
         <Label labelName="Institution *" />
-        <Span spanMsg="Please enter your Institution" />
+        <Span spanMsg="Please enter your Institution" v-show="errorInstitution"/>
         <Input
           class="input inputInstitution"
           type="text"
@@ -41,7 +41,7 @@
       
       <div>
          <Label labelName="Graduation *" />
-        <Span spanMsg="Please enter your Graduation" />
+        <Span spanMsg="Please enter your Graduation" v-show="errorGraduation" />
         <Input
           class="input inputGraduation"
           type="text"
@@ -64,6 +64,7 @@ import Button from "@/components/micro/Button/ButtonComponent.vue";
 import ButtonMore from "@/components/micro/ButtonMore/ButtonMore.vue";
 import ButtonCertificates from "@/components/micro/ButtonCertificates/ButtonCertificates.vue";
 import Span from "@/components/micro/Span/Span.vue";
+import { mapGetters } from "vuex";
 export default {
   /* eslint-disable */
   name: "Certificates",
@@ -75,9 +76,34 @@ export default {
     ButtonCertificates,
     Span,
   },
+  data() {
+    return {
+      errorTeamName: false,
+      errorInstitution: false,
+      errorGraduation: false,
+    };
+  },
   methods: {
+    ...mapGetters(["getTeamnameValid", "getInstitutionValid", "getGraduationValid"]),
+    error() {
+      if (this.getTeamnameValid() === false) {
+        this.errorTeamName = true;
+      } else {
+        this.errorTeamName = false;
+      }
+      if (this.getInstitutionValid() === false) {
+        this.errorInstitution = true;
+      } else {
+        this.errorInstitution = false;
+      }
+      if (this.getGraduationValid() === false) {
+        this.errorGraduation = true;
+      } else {
+        this.errorGraduation = false;
+      }
+    },
     finish() {
-      console.log("finish in Certificates");
+      this.error();
       this.$emit("finish", "certificates");
     },
   },
