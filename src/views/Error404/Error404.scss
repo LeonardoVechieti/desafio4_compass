@@ -1,10 +1,20 @@
-p{
+.erro{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   font-size: 2em;
   font-weight: bold;
   background-color: #e3d8d8;
   text-align: center;
+  font-family: 'Nunito';
+  h1{
+      font-size: 2em;
+      font-weight: bold;
+  }
+  h2{
+      font-size: 1em;
+      font-weight: bold;
+  }
 }

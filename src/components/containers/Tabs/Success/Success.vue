@@ -18,6 +18,7 @@
 
 <script>
 import ButtonComponent from "@/components/micro/Button/ButtonComponent.vue";
+import { mapActions } from "vuex";
 import { mapGetters } from "vuex";
 export default {
   // eslint-disable-next-line
@@ -60,12 +61,18 @@ export default {
       "getInstitution",
       "getGraduation",
     ]),
+    ...mapActions([
+      "setLocalStorage",
+    ]),
     resetPage() {
-      console.log("reset");
+      //console.log("reset");
+      this.setLocalStorage(false);
+      //this.emit("resetBasic");
       this.$emit("resetPage", "basic");
     },
   },
   created() {
+    this.setLocalStorage(true);
     this.fullname = this.getFullname();
     this.fullname = this.getFullname();
     this.nickname = this.getNickname();
