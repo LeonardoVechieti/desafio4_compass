@@ -1,13 +1,13 @@
 <template>
   <div class="cardBasic">
     <form class="form">
-      <div>
+      <div class="inputWrapper">
         <Label labelName="Full Name *"/>
         <Span spanMsg="Please enter your Name" />
         <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
       </div>
 
-      <div>
+      <div class="inputWrapper">
         <Label labelName="Nickname"/>
         <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
       </div>
