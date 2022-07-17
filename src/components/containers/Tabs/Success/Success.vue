@@ -61,11 +61,44 @@ export default {
       "getInstitution",
       "getGraduation",
     ]),
-    ...mapActions(["setLocalStorage"]),
+    ...mapActions([
+      "setFullname",
+      "setNickname",
+      "setEmail",
+      "setPhone",
+      "setDay",
+      "setMonth",
+      "setYear",
+      "setAge",
+      "setGithub",
+      "setLinkedin",
+      "setCertificates",
+      "setTeamname",
+      "setInstitution",
+      "setGraduation",
+      "setLocalStorage",
+    ]),
     resetPage() {
       this.setLocalStorage(false);
+      this.resetData();
       this.$emit("resetPage", "basic");
     },
+    resetData(){
+      this.setFullname("");
+      this.setNickname('');
+      this.setEmail('');
+      this.setPhone('');
+      this.setDay('');
+      this.setMonth('');
+      this.setYear('');
+      this.setAge('');
+      this.setGithub('');
+      this.setLinkedin('');
+      this.setCertificates('');
+      this.setTeamname('');
+      this.setInstitution('');
+      this.setGraduation('');
+    }
   },
   created() {
     this.setLocalStorage(true);

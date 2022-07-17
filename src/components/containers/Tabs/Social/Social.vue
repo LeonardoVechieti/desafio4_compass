@@ -8,6 +8,7 @@
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="linkedin"
+          :value="valueLinkedin"
         />
       </div>
       <div>
@@ -18,6 +19,7 @@
           type="text"
           placeholder="https://github.com/foobar"
           idInput="github"
+          :value="valueGithub"
         />
       </div>
       <div class="containerSocialButton" @click="next" >
@@ -32,7 +34,7 @@ import Label from "@/components/micro/Label/Label.vue";
 import Input from "@/components/micro/Input/Input.vue";
 import ButtonComponent from "@/components/micro/Button/ButtonComponent.vue";
 import Span from "@/components/micro/Span/Span.vue";
-import { mapGetters } from "vuex";
+import { mapGetters } from "vuex";	
 export default {
   // eslint-disable-next-line
   name: "Social",
@@ -45,10 +47,15 @@ export default {
   data() {
     return {
       errorGithub: false,
+      valueGithub: "",
+      valueLinkedin: "",
     };
   },
+  created() {
+    this.getData()
+  },
   methods: {
-    ...mapGetters(["getGithubValid"]),
+    ...mapGetters(["getGithubValid", "getGithub", "getLinkedin"]),
     error() {
       if (this.getGithubValid() === false) {
         this.errorGithub = true;
@@ -59,6 +66,10 @@ export default {
     next() {
       this.error();
       this.$emit("next", "certificates");
+    },
+    getData() {
+      this.valueGithub=this.getGithub();
+      this.valueLinkedin=this.getLinkedin();
     },
   },
 };

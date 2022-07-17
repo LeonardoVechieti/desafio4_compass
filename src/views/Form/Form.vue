@@ -16,9 +16,9 @@
         <Menu @nav="getNav" item="basic" v-show="nav_basic"/>
         <Menu @nav="getNav" item="social" v-show="nav_social" />
         <Menu @nav="getNav" item="certificates" v-show="nav_certificates" />
-        <Basic v-show="nav_basic" @next="btnNext" />
-        <Social v-show="nav_social" @next="btnNext" />
-        <Certificates v-show="nav_certificates" @finish="success" />
+        <Basic v-if="nav_basic===true" @next="btnNext" />
+        <Social v-if="nav_social===true" @next="btnNext" />
+        <Certificates v-if="nav_certificates===true" @finish="success" />
         <Success v-if="nav_success===true" @resetPage="btnReturn"/>
       </div>
     </div>
