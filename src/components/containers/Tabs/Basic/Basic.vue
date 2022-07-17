@@ -114,7 +114,8 @@ export default {
     next() {
       this.error();
       this.$emit("next","social");
-    }
+    },
+
   }
 };
 </script>
