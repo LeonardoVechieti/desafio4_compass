@@ -13,7 +13,7 @@ export default new Vuex.Store({
     month: '',
     year: '',
     age: '',
-    checkbox: false,
+    checkbox: true,
     linkedin: '',
     github: '',
     certificates: '',
@@ -27,7 +27,7 @@ export default new Vuex.Store({
     teamnameValid: false,
     institutionValid: false,
     graduationValid: false,
-    checkboxValid: false,
+    checkboxValid: true,
     localStorage: false,
     showSpan: false,
  
@@ -108,8 +108,8 @@ export default new Vuex.Store({
   },
   mutations: {
     setFullname(state, fullname) {
+      state.fullname = fullname;
       if (/^[A-Z]{1}[a-z]+( [a-zA-Z'"-]+)+$/.test(fullname)) {
-        state.fullname = fullname;
         state.fullnameValid = true;
       } else {
         state.fullnameValid = false;
@@ -121,8 +121,8 @@ export default new Vuex.Store({
       console.log(state.nickname);
     },
     setEmail(state, email) {
+      state.email = email;
       if (/^[^@ \n\r\t]+@[^@ \n\r\t]+\.[^@ \n\r\t]+$/.test(email)) {
-        state.email = email;
         state.emailValid = true;
       } else {
         state.emailValid = false;
@@ -169,9 +169,9 @@ export default new Vuex.Store({
       console.log(state.linkedin);
     },
     setGithub(state, github) { 
+      state.github = github;
       if (// eslint-disable-next-line no-useless-escape 
-      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(github)) {
-        state.github = github;
+      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(github)) { 
         state.githubValid = true;
       } else {
         state.githubValid = false;
@@ -183,9 +183,9 @@ export default new Vuex.Store({
       console.log(state.certificates);
     },
     setTeamname(state, teamname) {
+      state.teamname = teamname
       if (// eslint-disable-next-line no-useless-escape 
       /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(teamname)) {
-        state.teamname = teamname
         state.teamnameValid = true;
       } else {
         state.teamnameValid = false;
@@ -193,8 +193,8 @@ export default new Vuex.Store({
       console.log(state.teamnameValid + " Teamname: " + state.teamname);
     },
     setInstitution(state, Institution) {
+      state.Institution = Institution
       if(Institution.length > 3){
-        state.Institution = Institution
         state.institutionValid = true;
       } else {
         state.institutionValid = false;
