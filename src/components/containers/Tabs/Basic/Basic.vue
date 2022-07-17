@@ -4,24 +4,24 @@
       <div>
         <Label labelName="Full Name *"/>
         <Span spanMsg="Please enter your Name" v-show="errorName"/>
-        <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
+        <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname" :value="valueFullName"/>
       </div>
 
       <div>
         <Label labelName="Nickname"/>
-        <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
+        <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname" :value="valueNickname"/>
       </div>
 
       <div class="emailPhone">
         <div class="containerEmail">
           <Label labelName="Email *"/>
           <Span spanMsg="Please enter your Email" v-show="errorEmail"/>
-          <Input class="input" type="email" placeholder="foo@bar.com" idInput="email"/>
+          <Input class="input" type="email" placeholder="foo@bar.com" idInput="email" :value="valueEmail"/>
         </div>
 
         <div class="containerPhone">
           <Label labelName="Phone"/>
-          <Input class="input" type="number" placeholder="(83) 00000-0000" idInput="phone"/>
+          <Input class="input" type="number" placeholder="(83) 00000-0000" idInput="phone" :value="valuePhone"/>
         </div>
       </div>
   
@@ -33,17 +33,17 @@
       <div class="inputsAge">
         <div class="containerInputs">
           <Label labelName="Day"/>
-          <Input class="input" type="number" idInput="day"/>
+          <Input class="input" type="number" idInput="day" :value="valueDay"/>
         </div>
 
         <div class="containerInputs">
           <Label labelName="Month"/>
-          <Input class="input" type="number" idInput="month"/>
+          <Input class="input" type="number" idInput="month" :value="valueMonth"/>
         </div>
 
         <div class="containerInputs">
           <Label labelName="Year"/>
-          <Input class="input" type="number" idInput="year"/>
+          <Input class="input" type="number" idInput="year" :value="valueYear"/>
         </div>
 
         <div class="containerInputs">
@@ -81,6 +81,14 @@ export default {
   },
   data() {
     return {
+      valueFullName: '',
+      valueNickname: '',
+      valueEmail: '',
+      valuePhone: '',
+      valueDay: '',
+      valueMonth: '',
+      valueYear: '',
+      valueAge: '',
       errorName: false,
       errorEmail: false,
       errorAge: false,

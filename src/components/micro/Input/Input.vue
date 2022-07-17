@@ -64,11 +64,11 @@ export default {
         if (e.target.checked) {
           this.setCheckbox(true);
           //console.log("checked");
-          this.setLocalStorage(true);
+          //this.setLocalStorage(true);
       } else {
           this.setCheckbox(false);
           //console.log("unchecked");
-          this.setLocalStorage(false);
+          //this.setLocalStorage(false);
       }
       }
       if(this.idInput === "linkedin"){
