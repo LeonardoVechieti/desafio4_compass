@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <p>ola pagina success</p>
-    <p>Nome: {{ fullname }}</p>
-    <p>Email: {{ email }}</p>
-    <p>Phone: {{ phone }}</p>
-    <p>Day: {{ day }}</p>
-    <p>Month: {{ month }}</p>
-    <p>Year:{{ year }}</p>
-    <p>Age: {{ age }}</p>
-    <p>Git: {{ github }}</p>
-    <p>Link: {{ linkedin }}</p>
+  <div class="data">
+    <p class="text">Your data has been sent successfully!</p>
+    <p class="text">Full Name: {{ fullname }}</p>
+    <p class="text">Email: {{ email }}</p>
+    <p class="text">Birthday: {{ day }}/{{ month }}/{{ year }}</p>
+    <p class="text">Age: {{ age }}</p>
+    <p class="text">GitHub: {{ github }}</p>
+    <p class="text">Certificates: {{ certificates }}</p>
+    <p class="text">Team Name: {{ teamname }}</p>
+    <p class="text">Institution: {{ institution }}</p>
+    <p class="text">Graduation: {{ graduation }}</p>
     <div class="containerButton" @click="resetPage">
       <ButtonComponent text="Return" classButton="Button ButtonReturn" />
     </div>
@@ -61,13 +61,9 @@ export default {
       "getInstitution",
       "getGraduation",
     ]),
-    ...mapActions([
-      "setLocalStorage",
-    ]),
+    ...mapActions(["setLocalStorage"]),
     resetPage() {
-      //console.log("reset");
       this.setLocalStorage(false);
-      //this.emit("resetBasic");
       this.$emit("resetPage", "basic");
     },
   },
@@ -92,4 +88,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scooped>
+@import "./Success.scss";
+</style>
