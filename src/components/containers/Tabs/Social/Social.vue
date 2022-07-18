@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="cardSocial">
     <form class="formSocial">
-      <div>
+      <div class="inputSocial">
         <Label labelName="LinkedIn" />
         <Input
           class="input"
@@ -10,7 +10,7 @@
           idInput="linkedin"
         />
       </div>
-      <div>
+      <div class="inputSocial">
         <Label labelName="Github *" />
         <Span spanMsg="Please enter your GitHub Link" />
         <Input

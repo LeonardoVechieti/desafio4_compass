@@ -1,7 +1,7 @@
 <template>
   <div class="cardCertificates">
     <form id="formCertificates">
-      <div>
+      <div class="inputWrapper">
         <Label labelName="Certificates" />
         <Input
           class="input"
@@ -17,7 +17,7 @@
         <ButtonMore />
       </div>
 
-      <div>
+      <div class="inputWrapper">
         <Label labelName="Team Name *" />
         <Span spanMsg="Please enter your team name" />
         <Input
@@ -28,7 +28,7 @@
         />
       </div>
 
-      <div>
+      <div class="inputWrapper">
         <Label labelName="Institution *" />
         <Span spanMsg="Please enter your Institution" />
         <Input
@@ -39,8 +39,8 @@
         />
       </div>
       
-      <div>
-         <Label labelName="Graduation *" />
+      <div class="inputWrapper">
+        <Label labelName="Graduation *" />
         <Span spanMsg="Please enter your Graduation" />
         <Input
           class="input inputGraduation"
