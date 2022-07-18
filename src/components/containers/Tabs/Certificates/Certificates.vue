@@ -44,7 +44,7 @@
       
       <div class="inputWrapper">
         <Label labelName="Graduation *" />
-        <Span spanMsg="Please enter your Graduation" />
+        <Span spanMsg="Please enter your Graduation" v-show="errorGraduation"/>
         <Input
           class="input inputGraduation"
           type="text"
