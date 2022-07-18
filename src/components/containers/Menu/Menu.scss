@@ -1,39 +1,45 @@
 .menu-flex {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    font-family: "Nunito";
-  }
+  display: flex;
+  flex-direction: row;
+  width: 31.25em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-family: "Nunito";
+
   .nav-basic {
     width: 33%;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-bottom-color: #9b9d9f;
   }
   .nav-basic-at {
     width: 34%;
     border-bottom: 3px solid;
-    border-bottom-color: #074EE8;
+    border-bottom-color: #074ee8;
   }
   .menu-social {
     width: 33%;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-bottom-color: #9b9d9f;
   }
   .menu-social-at {
     width: 34%;
     border-bottom: 3px solid;
-    border-bottom-color: #074EE8;
+    border-bottom-color: #074ee8;
   }
   .menu-certificates {
     width: 33%;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-bottom-color: #9b9d9f;
   }
   .menu-certificates-at {
     width: 34%;
     border-bottom: 3px solid;
-    border-bottom-color: #074EE8;
+    border-bottom-color: #074ee8;
   }
+
+  @media(max-width: 600px) {
+    width: 80%;
+  }
+
+}

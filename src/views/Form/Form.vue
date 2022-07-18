@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <Header tab="first" v-if="nav_basic===true" />
-    <Header tab="second" v-if="nav_social===true" />
-    <Header tab="third" v-if="nav_certificates===true" />
-    <Header tab="success" v-if="nav_success===true" />
-
+<div class="tela">
+  <div class="formView">
     <div class="main">
+      <Header tab="first" v-show="nav_basic" />
+      <Header tab="second" v-show="nav_social" />
+      <Header tab="third" v-show="nav_certificates" />
+      <Header tab="success" v-show="nav_success" />
       <div class="card">
         <Title v-if="nav_success!==true" 
           type="h3"
@@ -23,6 +23,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

@@ -1,13 +1,13 @@
 .containerSpan {
     display: inline-block;
     margin-left: 20px;
+    vertical-align: baseline;
   .span {
     visibility: visible;
     display: inline-block;
     font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-size: 14px;
-    // line-height: 16px;
     color: #ff0000;
   }
 }

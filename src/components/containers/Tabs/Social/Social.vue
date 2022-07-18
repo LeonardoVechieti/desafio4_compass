@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="cardSocial">
     <form class="formSocial">
-      <div>
+      <div class="inputSocial">
         <Label labelName="LinkedIn" />
         <Input
           class="input"
@@ -11,7 +11,7 @@
           :value="valueLinkedin"
         />
       </div>
-      <div>
+      <div class="inputSocial">
         <Label labelName="Github *" />
         <Span spanMsg="Please enter your GitHub Link" v-show="errorGithub"/>
         <Input
