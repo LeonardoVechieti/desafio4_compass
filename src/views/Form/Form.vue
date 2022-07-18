@@ -58,7 +58,6 @@ export default {
       val_email: null,
       val_checkbox: null,
       val_age: null,
-
     };
   },
   methods: {
@@ -86,7 +85,6 @@ export default {
       }
     },
     success(item) {
-      console.log("sucess in form: " + item);
       switch (item) {
         case "certificates":
           if(this.getTeamnameValid() === true && this.getInstitutionValid() === true && this.getGraduationValid() === true &&
@@ -101,37 +99,26 @@ export default {
       }
     },
     btnNext(item) {
-      console.log("btnNext in form: " + item);
       switch (item) {
         case "social":
-          //inicio da validação da basic para o social
           if(this.getFullnameValid()===true && this.getEmailValid()===true && this.getCheckboxValid()===true && this.getAgeValid()===true){
-            //se a validação for true, então vai para o social
             this.nav_basic = false;
             this.nav_social = true;
             this.nav_certificates = false;
             this.nav_success = false;
           }
-          //console.log("val_fullname: " + this.getFullnameValid()); 
-          //console.log("val_email: " + this.getEmailValid());
-          //console.log("val_checkbox: " + this.getCheckboxValid());
-          //console.log("val_age: " + this.getAgeValid());
           break;
         case "certificates":
-          //inicio da validação do social para o certificates
           if(this.getGithubValid()===true){
-            //se a validação for true, então vai para o certificates
             this.nav_basic = false;
             this.nav_social = false;
             this.nav_certificates = true;
             this.nav_success = false;
           }
-          //console.log("val_github: " + this.getGithubValid());
           break;
       }
     },
     btnReturn(item) {
-      console.log("btnReturn in form: " + item);
       switch (item) {
         case "basic":
           this.nav_basic = true;

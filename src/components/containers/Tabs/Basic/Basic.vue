@@ -203,11 +203,8 @@ export default {
     dinamicYear() {
       /* eslint-disable */
       let dia = this.getDay();
-      console.log(day);
       let mes = this.getMonth();
-      console.log(month);
       let ano = this.getYear();
-      console.log(year);
       var idade = this.idade(ano, mes, dia);
       if(idade > 5 && idade < 122){
         this.setAge(idade);

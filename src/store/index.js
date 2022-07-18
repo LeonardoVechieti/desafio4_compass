@@ -112,11 +112,9 @@ export default new Vuex.Store({
       } else {
         state.fullnameValid = false;
       }
-      console.log("validou: " + state.fullnameValid +" Nome: "+ state.fullname);
     },
     setNickname(state, nickname) {
       state.nickname = nickname
-      console.log(state.nickname);
     },
     setEmail(state, email) {
       state.email = email;
@@ -125,23 +123,18 @@ export default new Vuex.Store({
       } else {
         state.emailValid = false;
       }
-      console.log("validou: " + state.emailValid + " Email: " + state.email);
     },
     setPhone(state, phone) {
       state.phone = phone
-      console.log(state.phone);
     },
     setDay(state, day) {
       state.day = day
-      console.log(state.day);
     },
     setMonth(state, month) {
       state.month = month
-      console.log(state.month);
     },
     setYear(state, year) {
       state.year = year
-      console.log(state.year);
     },
     setAge(state, age) {
       state.age = age
@@ -150,7 +143,6 @@ export default new Vuex.Store({
       } else {
         state.ageValid = false;
       }
-      console.log(state.ageValid + " Age: " + state.age);
     },
     setCheckbox(state, checkbox) {
       state.checkbox = checkbox
@@ -159,12 +151,9 @@ export default new Vuex.Store({
       } else {
         state.checkboxValid = false;
       }
-      console.log("StatusValidoVuex: " + state.checkbox);
-
     },
     setLinkedin(state, linkedin) {
       state.linkedin = linkedin
-      console.log(state.linkedin);
     },
     setGithub(state, github) { 
       state.github = github;
@@ -174,11 +163,9 @@ export default new Vuex.Store({
       } else {
         state.githubValid = false;
       }
-      console.log(state.githubValid + " Github: " + state.github);
     },
     setCertificates(state, certificates) {
       state.certificates = certificates
-      console.log(state.certificates);
     },
     setTeamname(state, teamname) {
       state.teamname = teamname
@@ -188,7 +175,6 @@ export default new Vuex.Store({
       } else {
         state.teamnameValid = false;
       }
-      console.log(state.teamnameValid + " Teamname: " + state.teamname);
     },
     setInstitution(state, Institution) {
       state.Institution = Institution
@@ -197,7 +183,6 @@ export default new Vuex.Store({
       } else {
         state.institutionValid = false;
       }
-      console.log(state.institutionValid + " Institution: " + state.Institution);
     },
     setGraduation(state, Graduation) {
       state.Graduation = Graduation
@@ -206,7 +191,6 @@ export default new Vuex.Store({
       } else {
         state.graduationValid = false;
       }
-      console.log(state.graduationValid + " Graduation: " + state.Graduation);
     },
     setLocalStorage(state, localStorage) {
       state.localStorage = localStorage
