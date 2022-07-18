@@ -3,7 +3,7 @@
     <form class="form">
       <div class="inputWrapper">
         <Label labelName="Full Name *"/>
-        <Span spanMsg="Please enter your Name" />
+        <Span spanMsg="Please enter your Name" v-show="errorName"/>
         <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
       </div>
 
