@@ -9,6 +9,7 @@
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="certificates"
+          :value="valueCertificates"
         />
       </div>
 
@@ -25,6 +26,7 @@
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="teamname"
+          :value="valueTeamName"
         />
       </div>
 
@@ -36,6 +38,7 @@
           type="text"
           placeholder="Universidade de Passo Fundo"
           idInput="institution"
+          :value="valueInstitution"
         />
       </div>
       
@@ -47,6 +50,7 @@
           type="text"
           placeholder="Ciências da Computação"
           idInput="graduation"
+          :value="valueGraduation"
         />
       </div>
 
@@ -81,10 +85,17 @@ export default {
       errorTeamName: false,
       errorInstitution: false,
       errorGraduation: false,
+      valueCertificates: "",
+      valueTeamName: "",
+      valueInstitution: "",
+      valueGraduation: "",
     };
   },
+  created() {
+    this.getData()
+  },
   methods: {
-    ...mapGetters(["getTeamnameValid", "getInstitutionValid", "getGraduationValid"]),
+    ...mapGetters(["getTeamnameValid", "getInstitutionValid", "getGraduationValid", "getCertificates", "getTeamname", "getInstitution", "getGraduation"]),
     error() {
       if (this.getTeamnameValid() === false) {
         this.errorTeamName = true;
@@ -105,6 +116,12 @@ export default {
     finish() {
       this.error();
       this.$emit("finish", "certificates");
+    },
+    getData() {
+      this.valueCertificates = this.getCertificates();
+      this.valueTeamName = this.getTeamname();
+      this.valueInstitution = this.getInstitution();
+      this.valueGraduation = this.getGraduation();
     },
   },
 };
