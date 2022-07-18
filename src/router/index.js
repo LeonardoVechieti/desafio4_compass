@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Form from '../views/Form/Form.vue'
-import PageSecondTab from '../views/PageSecondTab/PageSecondTab.vue'
-import PageThirdTab from '../views/PageThirdTab/PageThirdTab.vue'
-import PageSuccessTab from '../views/PageSuccessTab/PageSuccessTab.vue'
+import Error404 from '../views/Error404/Error404.vue'
+import Error401 from '../views/Error401/Error401.vue'
+import Success from '../components/containers/Tabs/Success/Success.vue'
 
 Vue.use(VueRouter)
 
@@ -14,20 +14,21 @@ const routes = [
     component: Form
   },
   {
-    path: '/second',
-    name: 'secondTab',
-    component: PageSecondTab
+    path: "*",
+    name: "Error 404",
+    component: Error404,
   },
   {
-    path: '/third',
-    name: 'thirdTab',
-    component: PageThirdTab
+    path: "/401",
+    name: "Error 401",
+    component: Error401,
   },
   {
-    path: '/success',
-    name: 'successTab',
-    component: PageSuccessTab
+    path: "/success",
+    name: "Success",
+    component: Success,
   }
+  
 ]
 
 const router = new VueRouter({

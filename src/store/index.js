@@ -13,7 +13,7 @@ export default new Vuex.Store({
     month: '',
     year: '',
     age: '',
-    checkbox: false,
+    checkbox: true,
     linkedin: '',
     github: '',
     certificates: '',
@@ -27,7 +27,7 @@ export default new Vuex.Store({
     teamnameValid: false,
     institutionValid: false,
     graduationValid: false,
-    checkboxValid: false,
+    checkboxValid: true,
     localStorage: false,
     showSpan: false,
  
@@ -56,48 +56,85 @@ export default new Vuex.Store({
     }, 
     getEmailValid(state) {
       return state.emailValid;
-    }
-
-
+    },
+    getFullname(state) {
+      return state.fullname;
+    },
+    getNickname(state) {
+      return state.nickname;
+    },
+    getEmail(state) {
+      return state.email;
+    },
+    getPhone(state) {
+      return state.phone;
+    },
+    getDay(state) {
+      return state.day;
+    },
+    getMonth(state) {
+      return state.month;
+    },
+    getYear(state) {
+      return state.year;
+    },
+    getAge(state) {
+      return state.age;
+    },
+    getCheckbox(state) {
+      return state.checkbox;
+    },
+    getLinkedin(state) {
+      return state.linkedin;
+    },
+    getGithub(state) {
+      return state.github;
+    },
+    getCertificates(state) {
+      return state.certificates;
+    },
+    getTeamname(state) {
+      return state.teamname;
+    },
+    getInstitution(state) {
+      return state.Institution;
+    },
+    getGraduation(state) {
+      return state.Graduation;
+    },
+   
   },
   mutations: {
     setFullname(state, fullname) {
+      state.fullname = fullname;
       if (/^[A-Z]{1}[a-z]+( [a-zA-Z'"-]+)+$/.test(fullname)) {
-        state.fullname = fullname;
         state.fullnameValid = true;
       } else {
         state.fullnameValid = false;
       }
-      console.log("validou: " + state.fullnameValid +" Nome: "+ state.fullname);
     },
     setNickname(state, nickname) {
       state.nickname = nickname
-      console.log(state.nickname);
     },
     setEmail(state, email) {
+      state.email = email;
       if (/^[^@ \n\r\t]+@[^@ \n\r\t]+\.[^@ \n\r\t]+$/.test(email)) {
-        state.email = email;
         state.emailValid = true;
       } else {
         state.emailValid = false;
       }
-      console.log("validou: " + state.emailValid + " Email: " + state.email);
     },
     setPhone(state, phone) {
       state.phone = phone
-      console.log(state.phone);
     },
     setDay(state, day) {
       state.day = day
-      console.log(state.day);
     },
     setMonth(state, month) {
       state.month = month
-      console.log(state.month);
     },
     setYear(state, year) {
       state.year = year
-      console.log(state.year);
     },
     setAge(state, age) {
       state.age = age
@@ -106,7 +143,6 @@ export default new Vuex.Store({
       } else {
         state.ageValid = false;
       }
-      console.log(state.ageValid + " Age: " + state.age);
     },
     setCheckbox(state, checkbox) {
       state.checkbox = checkbox
@@ -115,45 +151,38 @@ export default new Vuex.Store({
       } else {
         state.checkboxValid = false;
       }
-      console.log("StatusValidoVuex: " + state.checkbox);
-
     },
     setLinkedin(state, linkedin) {
       state.linkedin = linkedin
-      console.log(state.linkedin);
     },
     setGithub(state, github) { 
+      state.github = github;
       if (// eslint-disable-next-line no-useless-escape 
-      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(github)) {
-        state.github = github;
+      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(github)) { 
         state.githubValid = true;
       } else {
         state.githubValid = false;
       }
-      console.log(state.githubValid + " Github: " + state.github);
     },
     setCertificates(state, certificates) {
       state.certificates = certificates
-      console.log(state.certificates);
     },
     setTeamname(state, teamname) {
+      state.teamname = teamname
       if (// eslint-disable-next-line no-useless-escape 
       /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(teamname)) {
-        state.teamname = teamname
         state.teamnameValid = true;
       } else {
         state.teamnameValid = false;
       }
-      console.log(state.teamnameValid + " Teamname: " + state.teamname);
     },
     setInstitution(state, Institution) {
+      state.Institution = Institution
       if(Institution.length > 3){
-        state.Institution = Institution
         state.institutionValid = true;
       } else {
         state.institutionValid = false;
       }
-      console.log(state.institutionValid + " Institution: " + state.Institution);
     },
     setGraduation(state, Graduation) {
       state.Graduation = Graduation
@@ -162,7 +191,6 @@ export default new Vuex.Store({
       } else {
         state.graduationValid = false;
       }
-      console.log(state.graduationValid + " Graduation: " + state.Graduation);
     },
     setLocalStorage(state, localStorage) {
       state.localStorage = localStorage

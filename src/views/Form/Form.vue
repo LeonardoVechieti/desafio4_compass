@@ -7,7 +7,7 @@
       <Header tab="third" v-show="nav_certificates" />
       <Header tab="success" v-show="nav_success" />
       <div class="card">
-        <Title
+        <Title v-if="nav_success!==true" 
           type="h3"
           titleMsg="Team Sign Up"
           nameClass="title-card"
@@ -16,14 +16,14 @@
         <Menu @nav="getNav" item="basic" v-show="nav_basic"/>
         <Menu @nav="getNav" item="social" v-show="nav_social" />
         <Menu @nav="getNav" item="certificates" v-show="nav_certificates" />
-        <Basic v-show="nav_basic" @next="btnNext" />
-        <Social v-show="nav_social" @next="btnNext" />
-        <Certificates v-show="nav_certificates" @finish="success" />
-        <Success v-show="nav_success" />
+        <Basic v-if="nav_basic===true" @next="btnNext" />
+        <Social v-if="nav_social===true" @next="btnNext" />
+        <Certificates v-if="nav_certificates===true" @finish="success" />
+        <Success v-if="nav_success===true" @resetPage="btnReturn"/>
       </div>
     </div>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -59,11 +59,10 @@ export default {
       val_email: null,
       val_checkbox: null,
       val_age: null,
-
     };
   },
   methods: {
-    ...mapGetters(["getFullnameValid", "getEmailValid", "getCheckboxValid", "getAgeValid", "getGithubValid"]),
+    ...mapGetters(["getFullnameValid", "getEmailValid", "getCheckboxValid", "getAgeValid", "getGithubValid", "getTeamnameValid", "getInstitutionValid", "getGraduationValid"]),
     getNav(item) {
       switch (item) {
         case "basic":
@@ -87,43 +86,46 @@ export default {
       }
     },
     success(item) {
-      console.log("sucess in form: " + item);
       switch (item) {
         case "certificates":
-          this.nav_basic = false;
-          this.nav_social = false;
-          this.nav_certificates = false;
-          this.nav_success = true;
+          if(this.getTeamnameValid() === true && this.getInstitutionValid() === true && this.getGraduationValid() === true &&
+          this.getFullnameValid()===true && this.getEmailValid()===true && this.getCheckboxValid()===true && this.getAgeValid()===true &&
+          this.getGithubValid()===true) {
+            this.nav_basic = false;
+            this.nav_social = false;
+            this.nav_certificates = false;
+            this.nav_success = true;
+          }
           break;
       }
     },
     btnNext(item) {
-      console.log("btnNext in form: " + item);
       switch (item) {
         case "social":
-          //inicio da validação da basic para o social
           if(this.getFullnameValid()===true && this.getEmailValid()===true && this.getCheckboxValid()===true && this.getAgeValid()===true){
-            //se a validação for true, então vai para o social
             this.nav_basic = false;
             this.nav_social = true;
             this.nav_certificates = false;
             this.nav_success = false;
           }
-          //console.log("val_fullname: " + this.getFullnameValid()); 
-          //console.log("val_email: " + this.getEmailValid());
-          //console.log("val_checkbox: " + this.getCheckboxValid());
-          //console.log("val_age: " + this.getAgeValid());
           break;
         case "certificates":
-          //inicio da validação do social para o certificates
           if(this.getGithubValid()===true){
-            //se a validação for true, então vai para o certificates
             this.nav_basic = false;
             this.nav_social = false;
             this.nav_certificates = true;
             this.nav_success = false;
           }
-          //console.log("val_github: " + this.getGithubValid());
+          break;
+      }
+    },
+    btnReturn(item) {
+      switch (item) {
+        case "basic":
+          this.nav_basic = true;
+          this.nav_social = false;
+          this.nav_certificates = false;
+          this.nav_success = false;
           break;
       }
     },

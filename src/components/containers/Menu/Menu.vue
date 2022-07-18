@@ -70,33 +70,14 @@ export default {
   methods: {
      ...mapGetters(["getFullnameValid", "getEmailValid", "getCheckboxValid", "getAgeValid", "getGithubValid"]),
     nav1() {
-      // this.nav_basic = false;
-      // this.nav_basic_at = true;
-      // this.nav_social = true;
-      // this.nav_social_at = false;
-      // this.nav_certificates = true;
-      // this.nav_certificates_at = false; 
       this.$emit("nav", "basic");
     },
     nav2() {
-      // this.nav_basic = true;
-      // this.nav_basic_at = false;
-      // this.nav_social = false;
-      // this.nav_social_at = true;
-      // this.nav_certificates = true;
-      // this.nav_certificates_at = false;
       if(this.getFullnameValid()===true && this.getEmailValid()===true && this.getCheckboxValid()===true && this.getAgeValid()===true){
         this.$emit("nav", "social");
       }
-       
     },
     nav3() {
-      // this.nav_basic = true;
-      // this.nav_basic_at = false;
-      // this.nav_social = true;
-      // this.nav_social_at = false;
-      // this.nav_certificates = false;
-      // this.nav_certificates_at = true;
       if(this.getGithubValid()===true){
         this.$emit("nav", "certificates");
       }

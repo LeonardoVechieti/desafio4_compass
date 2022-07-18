@@ -9,6 +9,7 @@
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="certificates"
+          :value="valueCertificates"
         />
       </div>
 
@@ -19,23 +20,25 @@
 
       <div class="inputWrapper">
         <Label labelName="Team Name *" />
-        <Span spanMsg="Please enter your team name" />
+        <Span spanMsg="Please enter your team name" v-show="errorTeamName"/>
         <Input
           class="input inputTeam"
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="teamname"
+          :value="valueTeamName"
         />
       </div>
 
       <div class="inputWrapper">
         <Label labelName="Institution *" />
-        <Span spanMsg="Please enter your Institution" />
+        <Span spanMsg="Please enter your Institution" v-show="errorInstitution"/>
         <Input
           class="input inputInstitution"
           type="text"
           placeholder="Universidade de Passo Fundo"
           idInput="institution"
+          :value="valueInstitution"
         />
       </div>
       
@@ -47,6 +50,7 @@
           type="text"
           placeholder="Ciências da Computação"
           idInput="graduation"
+          :value="valueGraduation"
         />
       </div>
 
@@ -64,6 +68,7 @@ import Button from "@/components/micro/Button/ButtonComponent.vue";
 import ButtonMore from "@/components/micro/ButtonMore/ButtonMore.vue";
 import ButtonCertificates from "@/components/micro/ButtonCertificates/ButtonCertificates.vue";
 import Span from "@/components/micro/Span/Span.vue";
+import { mapGetters } from "vuex";
 export default {
   /* eslint-disable */
   name: "Certificates",
@@ -75,10 +80,50 @@ export default {
     ButtonCertificates,
     Span,
   },
+  data() {
+    return {
+      errorTeamName: false,
+      errorInstitution: false,
+      errorGraduation: false,
+      valueCertificates: "",
+      valueTeamName: "",
+      valueInstitution: "",
+      valueGraduation: "",
+    };
+  },
+  created() {
+    this.getData()
+    const Title = document.getElementById("title");     
+    Title.innerText = "Team Sign Up | Certificates"; 
+  },
   methods: {
+    ...mapGetters(["getTeamnameValid", "getInstitutionValid", "getGraduationValid", "getCertificates", "getTeamname", "getInstitution", "getGraduation"]),
+    error() {
+      if (this.getTeamnameValid() === false) {
+        this.errorTeamName = true;
+      } else {
+        this.errorTeamName = false;
+      }
+      if (this.getInstitutionValid() === false) {
+        this.errorInstitution = true;
+      } else {
+        this.errorInstitution = false;
+      }
+      if (this.getGraduationValid() === false) {
+        this.errorGraduation = true;
+      } else {
+        this.errorGraduation = false;
+      }
+    },
     finish() {
-      console.log("finish in Certificates");
+      this.error();
       this.$emit("finish", "certificates");
+    },
+    getData() {
+      this.valueCertificates = this.getCertificates();
+      this.valueTeamName = this.getTeamname();
+      this.valueInstitution = this.getInstitution();
+      this.valueGraduation = this.getGraduation();
     },
   },
 };

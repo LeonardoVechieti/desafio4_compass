@@ -8,16 +8,18 @@
           type="text"
           placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
           idInput="linkedin"
+          :value="valueLinkedin"
         />
       </div>
       <div class="inputSocial">
         <Label labelName="Github *" />
-        <Span spanMsg="Please enter your GitHub Link" />
+        <Span spanMsg="Please enter your GitHub Link" v-show="errorGithub"/>
         <Input
           class="input"
           type="text"
           placeholder="https://github.com/foobar"
           idInput="github"
+          :value="valueGithub"
         />
       </div>
       <div class="containerSocialButton" @click="next" >
@@ -32,6 +34,7 @@ import Label from "@/components/micro/Label/Label.vue";
 import Input from "@/components/micro/Input/Input.vue";
 import ButtonComponent from "@/components/micro/Button/ButtonComponent.vue";
 import Span from "@/components/micro/Span/Span.vue";
+import { mapGetters } from "vuex";	
 export default {
   // eslint-disable-next-line
   name: "Social",
@@ -41,10 +44,34 @@ export default {
     ButtonComponent,
     Span,
   },
+  data() {
+    return {
+      errorGithub: false,
+      valueGithub: "",
+      valueLinkedin: "",
+    };
+  },
+  created() {
+    this.getData()
+    const Title = document.getElementById("title");     
+    Title.innerText = "Team Sign Up | Social"; 
+  },
   methods: {
+    ...mapGetters(["getGithubValid", "getGithub", "getLinkedin"]),
+    error() {
+      if (this.getGithubValid() === false) {
+        this.errorGithub = true;
+      } else {
+        this.errorGithub = false;
+      }
+    },
     next() {
-      console.log("next in Social");
+      this.error();
       this.$emit("next", "certificates");
+    },
+    getData() {
+      this.valueGithub=this.getGithub();
+      this.valueLinkedin=this.getLinkedin();
     },
   },
 };
