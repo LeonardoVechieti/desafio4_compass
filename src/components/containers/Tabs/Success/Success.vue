@@ -101,6 +101,9 @@ export default {
     }
   },
   created() {
+    const Title = document.getElementById("title");     
+    Title.innerText = "Team Sign Up | Success"; 
+
     this.setLocalStorage(true);
     this.fullname = this.getFullname();
     this.fullname = this.getFullname();
