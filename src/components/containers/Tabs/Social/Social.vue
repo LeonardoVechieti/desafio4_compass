@@ -53,6 +53,8 @@ export default {
   },
   created() {
     this.getData()
+    const Title = document.getElementById("title");     
+    Title.innerText = "Team Sign Up | Social"; 
   },
   methods: {
     ...mapGetters(["getGithubValid", "getGithub", "getLinkedin"]),

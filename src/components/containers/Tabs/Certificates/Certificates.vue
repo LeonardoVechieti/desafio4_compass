@@ -93,6 +93,8 @@ export default {
   },
   created() {
     this.getData()
+    const Title = document.getElementById("title");     
+    Title.innerText = "Team Sign Up | Certificates"; 
   },
   methods: {
     ...mapGetters(["getTeamnameValid", "getInstitutionValid", "getGraduationValid", "getCertificates", "getTeamname", "getInstitution", "getGraduation"]),
