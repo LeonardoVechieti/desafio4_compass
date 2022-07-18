@@ -4,12 +4,12 @@
       <div class="inputWrapper">
         <Label labelName="Full Name *"/>
         <Span spanMsg="Please enter your Name" v-show="errorName"/>
-        <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname"/>
+        <Input class="input inputFullname" type="text" placeholder="Foo Bar" idInput="fullname" :value="valueFullName"/>
       </div>
 
       <div class="inputWrapper">
         <Label labelName="Nickname"/>
-        <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname"/>
+        <Input class="input inputNickname" type="text" placeholder="Juanito" idInput="nickname" :value="valueNickname"/>
       </div>
 
       <div class="emailPhone">
