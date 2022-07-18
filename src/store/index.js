@@ -103,8 +103,6 @@ export default new Vuex.Store({
       return state.Graduation;
     },
    
-
-
   },
   mutations: {
     setFullname(state, fullname) {
