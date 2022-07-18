@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-top: 69.6%;
+        margin-top: 57.5%;
     }
 
     @media(max-width: 600px) {
@@ -22,6 +22,10 @@
         flex-direction: column;
         width: 80%;
         margin-top: 20px;
+
+        .tela {
+            overflow-y: auto;
+        }
 
         .inputSocial {
             width: 100%;
